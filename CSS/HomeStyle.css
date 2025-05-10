@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-
 :root {
-    --maincolor: #2f1c4e;
-    --subcolor: #EAA023;
-    --textcolor: #ffffff;
-}
-
+    --subcolor: #04aa6a;
+    --maincolor: #d0f5b8;
+    --textcolor: hsl(0, 0%, 100%);
+    --color-footer: #d3e030;
+  }
+  
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +15,20 @@
     box-sizing: border-box;
 
 }
+
+
+section {
+    transform: translateY(50px); /* Dịch xuống một chút */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Hiệu ứng mờ và dịch chuyển */
+}
+
+
+section.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+
 
 ul {
     list-style: none;
@@ -52,9 +65,8 @@ a {
 
 .top {
     background-color: transparent;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
+    padding: 20px 0;
+    position: relative;
     z-index: 1;
     transition: transform 0.3s ease-in-out;
     /* Thêm hiệu ứng chuyển động */
@@ -77,7 +89,7 @@ a {
 }
 
 .top .logo img {
-    width: 80px
+    width: 80px;
 }
 
 .top .logo {
@@ -183,7 +195,7 @@ a {
     transform: translateX(0);
 }
 
-/*Big Iamge*/
+/*Big Iamge--------------------------------------------------*/
 
 .btn {
     background-color: transparent;
@@ -257,9 +269,18 @@ a {
     opacity: 0.5;
     z-index: -1;
 }
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
 .big-image .big-image-content {
-    color: var(--textcolor);
+    color:var(--textcolor);
     text-align: center;
     font-size: 50px;
     font-weight: bold;
@@ -279,6 +300,48 @@ a {
     font-weight: 300;
     margin-bottom: 20px;
     font-family: 'dancing script', cedarville cursive;
+}
+
+/* Video nền chỉ cho section .big-image */
+.big-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Chiều cao toàn màn hình */
+}
+
+.big-image .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo video bao phủ toàn bộ section */
+    z-index: -1; /* Đặt video phía sau nội dung */
+}
+
+.big-image .big-image-content {
+    position: relative;
+    z-index: 1; /* Đặt nội dung phía trên video */
+    color: var(--textcolor);
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.big-image .big-image-content h2 {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.big-image .big-image-content p {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
 }
 
 /*About us*/
@@ -434,4 +497,50 @@ a {
     100% {
         transform: translate(-50%, -50%) rotate(360deg); /* Quay đủ 360 độ */
     }
+}
+
+
+
+
+
+
+/* Sứ Mệnh----------------------------------------------- */
+
+.mission {
+    background-color: var(--maincolor); /* Màu nền từ biến :root */
+    color: var(--textcolor); /* Màu chữ từ biến :root */
+    padding: 50px 0; /* Khoảng cách trên và dưới */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mission .section-title h2 {
+    font-size: 45px;
+    color: var(--textcolor); /* Màu chữ từ biến :root */
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.mission .section-title h2::before {
+    content: attr(data-title); /* Hiển thị nội dung từ thuộc tính data-title */
+    display: block;
+    font-size: 20px;
+    color: var(--subcolor); /* Màu phụ từ biến :root */
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+.mission-content {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.9); /* Màu chữ nhạt hơn */
+}
+
+.mission-content p {
+    margin-bottom: 15px;
 }

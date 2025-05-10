@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --subcolor: #04aa6a;
+  --maincolor: #d0f5b8;
+  --textcolor: #02764a;
+  --color-footer: #d3e030;
+}
+
+body {
+  background: linear-gradient(135deg, var(--maincolor), var(--color-footer));
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Box layout mặc định (desktop) */
+.box {
+  display: flex;
+  width: 1200px;
+  height: 700px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.box2 {
+  width: 50%;
+  height: 100%;
+  background: url("../IMG/tribit_logo_500x700.png") no-repeat center center;
+  background-size: cover;
+  border: solid;
+}
+
+.box1 {
+  width: 50%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.box1 .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.box1 .form-group label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+h2 {
+  color: #02764a;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: 500px;
+  font-size: 18px;
+}
+
+.lb_user {
+  transform: translateX(-142px);
+}
+
+.lb_email {
+  transform: translateX(-134px);
+}
+
+.lb_password {
+  transform: translateX(-166px);
+}
+
+.lb_accept_password {
+  transform: translateX(-126px);
+}
+input {
+  width: 410px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  border: solid var(--textcolor);
+  object-fit: cover;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+.btn_sign-in {
+  height: 40px;
+  width: 80%;
+  background-color: var(--textcolor);
+  color: white;
+  max-width: 500px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 20px;
+  margin: 0 auto 20px auto; /* ← SỬA ở đây (căn giữa) */
+  border: none;
+  text-align: center;
+  display: block;
+}
+.login {
+  margin-left: 55px;
+}
+.move_login {
+  font-weight: bold;
+  color: var(--textcolor);
+  margin: 10px 0px 10px 0px;
+}
+.lbtk {
+  font-weight: bold;
+}
+@media (max-width: 857px) {
+  .box {
+    flex-direction: column;
+    width: 95%;
+    height: 1400px; /* vẫn giữ đúng chiều cao */
+  }
+
+  .box1,
+  .box2 {
+    width: 100%;
+  }
+
+  .box1 {
+    height: 50%; /* 50% của 700px = 350px */
+  }
+
+  .box2 {
+    height: 50%;
+    padding: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .box {
+    flex-direction: column;
+    width: 95%;
+    height: 1400px; /* vẫn giữ đúng chiều cao */
+  }
+
+  .box1,
+  .box2 {
+    width: 100%;
+  }
+
+  .box1 {
+    height: 50%; /* 50% của 700px = 350px */
+  }
+
+  .box2 {
+    height: 50%;
+    padding: 20px;
+  }
+
+  .lb_user {
+    transform: translateX(-78px);
+  }
+  .lb_email {
+    transform: translateX(-70px);
+  }
+  .lb_password {
+    transform: translateX(-100px);
+  }
+  .lb_accept_password {
+    transform: translateX(-64px);
+  }
+  input {
+    max-width: 280px;
+  }
+  .btn_sign-in {
+    font-size: 16px;
+  }
+
+  .btn_login_google {
+    font-size: 16px;
+  }
+  .move_forgot_password {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .move_login {
+    font-size: 14px;
+    /* margin: 10px 55px 10px 0px; */
+  }
+  .lbtk {
+    transform: translateX(-24px);
+    font-size: 14px;
+  }
+  .box2 {
+    background: url("../IMG/tribit300x350.png") no-repeat center center;
+    background-color: black;
+  }
+}
