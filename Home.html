@@ -3,72 +3,67 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>VietNamJourney</title>
     <link rel="stylesheet" href="CSS/HomeStyle.css">
-    <link rel="stylesheet" href="CSS/Footer.css">
-
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Header Section -->
     <section class="top">
         <div class="container">
             <div class="row justify-content">
-                <div class="logo"><img src="IMG/tribit_logo_50x50.png" alt="Logo"></div>
-                <div class="menu-bar">
-                    <span></span>
-                </div>
-                <div class="menu-items">
-                    <ul>
-                        <li class="menu-item"> <a href=""> Trang Chủ</a></li>
-                        <li class="menu-item"> <a href=""> Về Chúng Tôi</a></li>
-                        <li class="menu-item"> <a href=""> Thực Đơn</a></li>
-                        <li class="menu-item"> <a href=""> Phản Hồi</a></li>
-                        <li class="menu-item"> <a href=""> Liên Hệ</a></li>
-                    </ul>
-                </div>
+                <iframe src="nav_bar.html" width="100%" height="160" style="border: none;"></iframe>
+
             </div>
-        </div>
     </section>
 
 
+    <!-- Big Image Section -->
     <section class="big-image">
-        <video class="video-background" autoplay loop muted>
+        <video class="video-background responsive-video" autoplay loop muted>
             <source src="Video/Huyen Vi Home.mp4" type="video/mp4">
             Trình duyệt của bạn không hỗ trợ thẻ video.
         </video>
         <div class="big-image-content">
-            <h2>Emotional Journey</h2>
-            <p>Mỗi Chuyến đi là mỗi câu chuyện</p>
-            <button class="big-image-content-btn btn">MENU</button>
+            <h2 class="responsive-text animate__animated animate__bounceInUp">Emotional Journey</h2>
+            <p class="responsive-text animate__animated animate__bounceInUp animate__delay-1s">The Journey Is The Story
+            </p>
+
+            <button class="big-image-content-btn btn responsive-btn">MENU</button>
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="about section-padding">
         <div class="container">
             <div class="row">
                 <div class="section-title">
-                    <h2 data-title="Câu chuyện">Về chúng tôi</h2>
+                    <h2 data-title="Câu chuyện" class="animate__animated animate__fadeInLeft">Về chúng tôi</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="about-item">
-                    <div class="about-content">
-                        <h2>CHÀO MỪNG CÁC BẠN ĐẾN VỚI THAI MARKET</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit sit amet turpis
-                            suscipit
-                            tincidunt. Nunc rhoncus eros id velit porttitor elementum sed sed nisi. Fusce mollis, turpis
-                            ac tempor
-                            mollis, odio mauris tempor nulla, id tincidunt ligula lorem nec ligula.</p>
-                        <button class="btn">XEM MENU</button>
+                    <div
+                        class="about-content responsive-about animate__animated animate__fadeInRight animate__delay-1s">
+                        <h2>CHÀO MỪNG CÁC BẠN ĐẾN VỚI EMOTION JOURNEY – HÀNH TRÌNH CẢM XÚC CÙNG VĂN HÓA VIỆT</h2>
+                        <p>Emotion Journey là nơi khơi nguồn cảm xúc từ những trải nghiệm văn hóa và ẩm thực độc đáo của Việt Nam. Mỗi hành trình là một câu chuyện – từ hương vị truyền thống đến những nét đẹp địa phương, chúng tôi mong muốn kết nối bạn với vẻ đẹp sâu sắc và đa dạng của đất nước hình chữ S.</p>
+                        <button class="btn">KHÁM PHÁ</button>
+                        
                     </div>
                 </div>
                 <div class="about-item">
-                    <div class="about-item-img">
-                        <span>10 nam kn</span>
-                        <img src="IMG/tribit300x350.png" alt="">
+                    <div class="about-item-img responsive-img">
+                        <span>10 năm kinh nghiệm</span>
+                        <img src="IMG/tribit300x350.png" alt="Thai Market">
                     </div>
                 </div>
             </div>
@@ -76,6 +71,7 @@
     </section>
 
 
+    <!-- Mission Section -->
     <section class="mission section-padding">
         <div class="container">
             <div class="row">
@@ -84,7 +80,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="mission-content">
+                <div class="mission-content responsive-mission">
                     <p>
                         Chúng tôi cam kết mang đến cho khách hàng những trải nghiệm tuyệt vời nhất thông qua các chuyến
                         đi đầy cảm xúc và ý nghĩa.
@@ -103,56 +99,7 @@
     </section>
 
 
-
-    <footer>
-
-        <div class="container__footer">
-            <div class="box__footer">
-                <div class="logo">
-                    <img src="IMG/tribit_logo_500x700.png" alt="">
-                </div>
-                <div class="terms">
-                    <p>Giao lưu văn hóa không chỉ là sự kết nối giữa các nền văn minh, mà còn là nhịp cầu đưa con người
-                        đến gần nhau hơn, cùng sẻ chia, thấu hiểu và tôn trọng những giá trị khác biệt. Thông qua mỗi
-                        cuộc gặp gỡ, chúng ta góp phần xây dựng một thế giới hòa bình, đa dạng và nhân ái hơn.
-
-                    </p>
-                </div>
-            </div>
-            <div class="box__footer">
-                <h2>Soluciones</h2>
-                <a href="https://www.google.com">App Desarrollo</a>
-                <a href="#">App Marketing</a>
-                <a href="#">IOS Desarrollo</a>
-                <a href="#">Android Desarrollo</a>
-            </div>
-
-            <div class="box__footer">
-                <h2>Compañia</h2>
-                <a href="#">Acerca de</a>
-                <a href="#">Trabajos</a>
-                <a href="#">Procesos</a>
-                <a href="#">Servicios</a>
-            </div>
-
-            <div class="box__footer">
-                <h2>Redes Sociales</h2>
-                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
-                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
-                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
-                <a href="#"><i class="fab fa-youtube-square"></i> YouTube</a>
-                <a href="#"><i class="fab fa-pinterest-square"></i> Pinterest</a>
-                <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
-            </div>
-
-        </div>
-
-        <div class="box__copyright">
-            <hr>
-            <p>nvphuongaz@gmail.com © 2025 <b>Học Trò a Đính</b></p>
-        </div>
-    </footer>
+    <iframe src="footer.html" width="100%" height="290" style="border: none;"></iframe>
 
 
     <script src="JS/HomeScript.js"></script>
