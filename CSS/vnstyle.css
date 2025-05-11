@@ -1,21 +1,21 @@
 path{
-  fill: #db2017;
+  fill: #eeff00;
 }
 
 path:hover {
   stroke: hsl(56, 89%, 55%) !important;
   stroke-width: 2px;
   stroke-linejoin: round;
-  fill: hsl(56, 89%, 55%);
+  fill: hsl(0, 96%, 55%);
   cursor: pointer;
-  /* transform: scale(-3);
+  /* transform: scale(-3);  
   transition: .5 ease; */
 }
 
 #arrow ion-icon{
   position: fixed;
   bottom: 20px;
-  right: 25px;
+  right: 25px;  
   background-color: #3b79c9  ;
   color: #fff;
   width: 20px;

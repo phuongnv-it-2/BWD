@@ -201,26 +201,25 @@ function displayProvince(jsonData) {
 $(document).ready(function () {
     $("svg").svgPanZoom();
 });
-
-$(document).on('click', 'path', function () {
+$(document).on('click', 'path', function (e) {
     $("html,body").animate({
         scrollTop: 0,
         behavior: "smooth"
     }, 600);
-    return false;
-});
 
-$(document).on('click', 'path', function (e) {
     var province = findProvince(e.target.id);
-    var jsonPath = "province/" + province.id + ".json";
+    var jsonPath = "JSON/" + province.id + ".json";
+
     $.getJSON(jsonPath, function (data) {
         // Hiển thị thông tin về tỉnh thành và dữ liệu từ tệp JSON
         $("#info-box").css('display', 'block');
-        $("#info-box").css({ position: "absolutely", left: 650, top: 0 });
+        $("#info-box").css({ position: "absolute", left: 650, top: 0 });
         $('#info-box').html(displayProvince(data));
     });
-   
+
+    return false;
 });
+
 $(document).ready(function () {
     $("svg").svgPanZoom();
 
@@ -258,6 +257,13 @@ $(document).ready(function () {
     });
 
 });
+$(document).on('mouseover', 'path', function (e) {
+    var province = findProvince(e.target.id);
+    $("#info-box1").text(province.name);
+    $("#info-box1").css('display', 'block');
+    $("#info-box1").css({ position: "absolutely", left: e.pageX +30, top: e.pageY, 'z-index':1000 });
+});
+
 
 
 
