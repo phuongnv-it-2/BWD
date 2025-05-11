@@ -267,3 +267,50 @@ $(document).on('mouseover', 'path', function (e) {
 
 
 
+
+
+// Slide Moving-----------------------------------------------
+// -----------------------------------------------------------
+const slider = document.getElementById("slider");
+const cards = slider.children;
+const cardCount = cards.length;
+const cardWidth = slider.offsetWidth;  // Sử dụng chiều rộng của slider container làm chiều rộng của card
+
+let index = 1; // Start from 1 because of clone
+
+// Clone first and last cards to create infinite sliding effect
+const firstClone = cards[0].cloneNode(true);
+const lastClone = cards[cardCount - 1].cloneNode(true);
+
+slider.appendChild(firstClone);
+slider.insertBefore(lastClone, cards[0]);
+
+// Set initial position
+slider.style.transform = `translateX(-${cardWidth * index}px)`;
+
+// Function to move to the next card
+function moveToNext() {
+  if (index >= cardCount + 1) return; // Prevent moving beyond the last card
+  index++;
+  slider.style.transition = "transform 0.5s ease-in-out";
+  slider.style.transform = `translateX(-${cardWidth * index}px)`;
+}
+
+// Event listener for when the transition ends to reset position
+slider.addEventListener("transitionend", () => {
+  if (index === cardCount + 1) {
+    slider.style.transition = "none";
+    index = 1;
+    slider.style.transform = `translateX(-${cardWidth * index}px)`;
+  }
+  if (index === 0) {
+    slider.style.transition = "none";
+    index = cardCount;
+    slider.style.transform = `translateX(-${cardWidth * index}px)`;
+  }
+});
+
+// Auto slide
+setInterval(() => {
+  moveToNext();
+}, 3000);
