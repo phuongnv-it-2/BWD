@@ -58,11 +58,8 @@ path:hover {
 
 svg {
   width: 100%;
-  /* Đảm bảo SVG vừa với container */
   height: 100%;
-  /* Đảm bảo SVG vừa với container */
   object-fit: contain;
-  /* Đảm bảo bản đồ không bị méo */
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -397,11 +394,11 @@ ion-icon.arrow {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.266);
   color: hsl(225, 8%, 42%);
 }
-/* 
+
 .letter-section .header-footer{
   font-weight: bold;
   color: hsl(206, 34%, 20%);
-} */
+}
 
 .letter-section #V{
   color: red;
@@ -430,6 +427,13 @@ ion-icon.arrow {
   33%  { color: yellow; }
   66%  { color: rgb(47, 0, 255); }
   100% { color: red; }
+}
+
+.image-slogan{
+  display: flex;
+  gap: 20px;  
+  align-items: center;
+
 }
 
 
