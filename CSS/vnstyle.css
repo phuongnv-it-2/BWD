@@ -8,7 +8,7 @@ path:hover {
   stroke-linejoin: round;
   fill: hsl(0, 96%, 55%);
   cursor: pointer;
-  /* transform: scale(-3);  
+  /* transform: scale(5);  
   transition: .5 ease; */
 }
 
@@ -28,17 +28,23 @@ path:hover {
   padding: 10px;
 }
 
+#info-box1 {
+  position: absolute;
+  color: hsl(0, 96%, 55%);
+  background-color:#eeff00;
+  border-radius: 2px;
+  box-shadow: 0 10px 20px 0 rgba(7, 7, 7, 0.3);
+  padding: 3px 5px;
+}
+
+
 #map-box {
   display: block;
   position: fixed;
   top: 10%;
-  /* Đặt cách phía trên một khoảng */
   left: 3%;
-  /* Đặt cách phía trái một khoảng */
   width: 600px;
-  /* Giảm chiều rộng */
   height: 700px;
-  /* Giảm chiều cao */
   -webkit-box-shadow: 0 5px 15px 0 rgba(255, 255, 255, 0.3);
   box-shadow: 0 5px 15px 0 rgba(194, 22, 22, 0.3);
   border-radius: 10px;
@@ -465,3 +471,20 @@ ion-icon.arrow {
   border-radius: 10px;  
 }
 
+
+/* 
+TRong đồng Xoay --------------------------------------*/
+.rotating-image {
+  width: 200px;
+  height: auto;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

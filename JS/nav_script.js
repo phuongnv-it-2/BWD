@@ -10,10 +10,10 @@ menu.onclick = () => {
 $(window).scroll(function () {
     if ($(this).scrollTop() >= 100) {
         $('header').addClass('nav-fixed');
-        logo.src='Img/logoo.png';
+        logo.src='Img/logo.png';
     } else {
         $('header').removeClass('nav-fixed');
-        logo.src='Img/logoo.png';
+        logo.src='Img/logo.png';
     }
 });
 
@@ -25,5 +25,5 @@ var btnLogin = document.getElementById('btn-in');
 // Gắn sự kiện click vào nút đăng nhập
 btnLogin.addEventListener('click', function() {
   // Chuyển hướng đến trang login.html
-  window.location.href = 'login.html';
+  window.location.href = 'sign-in.html';
 });
