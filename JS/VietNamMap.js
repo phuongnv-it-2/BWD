@@ -77,125 +77,148 @@
 
     function displayProvince(jsonData) {
         return `
-        <div class="info-component">
-        <div class="title-content">
-            <p class="subtitle">Chào mừng bạn đến với</p>
-            <h2 class="info-title">${jsonData.province}</h2>
-            <div class="underline"></div>
-            <p class="info-text">${jsonData.description}</p>
-        </div>
-        <div class="section natural-section">
-            <div class="natural-img"><img src="${jsonData.naturalImg}" alt=""></div>
-            <div class="natural-content">
-                <h3 class="ex-title">Khám phá Thiên Nhiên</h3>
-                <div class="underline"></div>
-                <p class="ex-text">${jsonData.naturalDescription}</p>
-            </div>
-        </div>
+        <link rel="stylesheet" href="CSS/VnPanel.css">
+          <div class="title-section section">
+        <h1 class="head">${jsonData.province}</h1>
+        <h2 class="title">"Huế – Hồn Việt trong lòng cố đô"</h2>
+        <div class="underline"></div>
+      </div>
 
-        <div class="section schedule-section">
-            <div class="schedule-content">
-                <h3 class="ex-title">Lịch trình gợi ý</h3>
-                <div class="underline"></div>
-                <p class="ex-text">${jsonData.scheduleDescription}</p>
+    <section class="letter-section section">
+    <h2 class="TieuDe">I. Văn hóa ẩm thực</h2>
+
+<div class="slide-container">
+	
+	<div class="slides">
+		<img src="${jsonData.ImgSlide1}" class="active">
+		<img src="${jsonData.ImgSlide2}">
+		<img src="${jsonData.ImgSlide3}">
+		<img src="${jsonData.ImgSlide4}">
+		<img src="${jsonData.ImgSlide5}">
+	</div>
+
+	<div class="buttons">
+		<span class="next">&#10095;</span>
+		<span class="prev">&#10094;</span>
+	</div>
+
+	<div class="dotsContainer">
+		<div class="dot active" attr='0' onclick="switchImage(this)"></div>
+		<div class="dot" attr='1' onclick="switchImage(this)"></div>
+		<div class="dot" attr='2' onclick="switchImage(this)"></div>
+		<div class="dot" attr='3' onclick="switchImage(this)"></div>
+		<div class="dot" attr='4' onclick="switchImage(this)"></div>
+	</div>
+
+</div>
+<script src="JS/SlideShow.js"></script>
+  </section>
+
+
+
+
+
+  <section class="letter-section section">
+    <h2 class="TieuDe">II. Địa danh nổi bật</h2>
+   
+    <div class="container">
+        <div class="slide">
+            <div class="item" style="background-image: url(${jsonData.ImgPlace1});">
+
+                <div class="content">
+                    <div class="name">${jsonData.namePlace1}</div>
+                    <div class="des">${jsonData.Content1}</div>
+                    <button>See More</button>
+                </div>
             </div>
-            <div class="schedule-wrapper">
-                <div class="schedule-box">
-                    <div class="schedule-img"><img src="${jsonData.fImg}" alt=""></div>
-                    <div class="schedule-info">
-                        <p>Ngày đầu tiên</p>
-                        <h4>${jsonData.firstDay}</h4>
-                        <p class="ex-text">${jsonData.fDescription}</p>
-                    </div>
+            <div class="item" style="background-image: url(${jsonData.ImgPlace2});">
+                <div class="content">
+                    <div class="name">${jsonData.namePlace2}</div>
+                    <div class="des">${jsonData.Content2}</div>
+                    <button>See More</button>
                 </div>
-                <div class="schedule-box">
-                    <div class="schedule-img"><img src="${jsonData.sImg}" alt=""></div>
-                    <div class="schedule-info">
-                        <p>Ngày thứ hai</p>
-                        <h4>${jsonData.secondDay}</h4>
-                        <p class="ex-text">${jsonData.sDescription}</p>
-                    </div>
+            </div>
+            <div class="item" style="background-image: url(${jsonData.ImgPlace3});">
+                <div class="content">
+                    <div class="name">${jsonData.namePlace3}</div>
+                    <div class="des">${jsonData.Content3}</div>
+                    <button>See More</button>
                 </div>
-                <div class="schedule-box">
-                    <div class="schedule-img"><img src="${jsonData.tImg}" alt=""></div>
-                    <div class="schedule-info">
-                        <p>Ngày thứ ba</p>
-                        <h4>${jsonData.thirdDay}</h4>
-                        <p class="ex-text">${jsonData.tDescription}</p>
-                    </div>
+            </div>
+            <div class="item" style="background-image: url(${jsonData.ImgPlace4});">
+                <div class="content">
+                    <div class="name">${jsonData.namePlace4}</div>
+                    <div class="des">${jsonData.Content4}</div>
+                    <button>See More</button>
                 </div>
-                <div class="schedule-box">
-                    <div class="schedule-img"><img src="${jsonData.lImg}" alt=""></div>
-                    <div class="schedule-info">
-                        <p>Ngày cuối cùng</p>
-                        <h4>${jsonData.lastDay}
-                        </h4>
-                        <p class="ex-text">${jsonData.lDescription}</p>
-                    </div>
+            </div>
+            <div class="item" style="background-image: url(${jsonData.ImgPlace5});">
+                <div class="content">
+                    <div class="name">${jsonData.namePlace5}</div>
+                    <div class="des">${jsonData.Content5}</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(${jsonData.ImgPlace6});">
+                <div class="content">
+                    <div class="name">${jsonData.namePlace6}</div>
+                    <div class="des">${jsonData.Content6}</div>
+                    <button>See More</button>
                 </div>
             </div>
         </div>
-        <!-- community -->
-        <div class="community-section">
-            <div class="community-content">
-                <h3 class="ex-title">Cộng đồng Techtrek tại đây</h3>
-                <div class="underline"></div>
-                <p class="ex-text">Bạn có thể tham gia cùng Cộng đồng TechTrek để khám phá <br>những vẻ đẹp tuyệt vời
-                    của Việt Nam cùng các Trekker.</p>
-            </div>
-            
-            <div class="community-wrapper">
-                <div class="community-box">
-                    <div class="community-img"><img src="${jsonData.personImg1}" alt=""></div>
-                    <div class="name-info">
-                        <h5 class="name">${jsonData.name1}</h5>
-                        <ion-icon name="checkmark-circle"></ion-icon>
-                    </div>
-                    <p>Vui tính, hòa đồng, thân thiện</p>
-                    <div class="location">
-                        <ion-icon name="location"></ion-icon>
-                        <span>${jsonData.location1}</span>
-                    </div>
-                </div>
-                <div class="community-box">
-                    <div class="community-img"><img src="${jsonData.personImg2}" alt=""></div>
-                    <div class="name-info">
-                        <h5 class="name">${jsonData.name2}</h5>
-                        <ion-icon name="checkmark-circle"></ion-icon>
-                    </div>
-                    <p>Vui vẻ, hoạt bát, mến khách</p>
-                    <div class="location">
-                        <ion-icon name="location"></ion-icon>
-                        <span>${jsonData.location2}</span>
-                    </div>
-                </div>
-                <div class="community-box">
-                    <div class="community-img"><img src="${jsonData.personImg3}" alt=""></div>
-                    <div class="name-info">
-                        <h5 class="name">${jsonData.name3}</h5>
-                        <ion-icon name="checkmark-circle"></ion-icon>
-                    </div>
-                    <p>Chuyên nghiệp, lịch sự</p>
-                    <div class="location">
-                        <ion-icon name="location"></ion-icon>
-                        <span>${jsonData.location3}</span>
-                    </div>
-                </div>
-                <div class="community-box">
-                    <div class="community-img"><img src="${jsonData.personImg4}" alt=""></div>
-                    <div class="name-info">
-                        <h5 class="name">${jsonData.name4}</h5>
-                        <ion-icon name="checkmark-circle"></ion-icon>
-                    </div>
-                    <p>Đam mê khám phá, năng nổ</p>
-                    <div class="location">
-                        <ion-icon name="location"></ion-icon>
-                        <span>${jsonData.location4}</span>
-                    </div>
-                </div>
-            </div>
+        <div class="button">
+            <button class="prevbtn"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="nextbtn"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
+    <script src="JS/slideProvince.js"></script>
+  </section>
+
+
+
+  <section class="letter-section section">
+    <h2 class="TieuDe">III. Làng nghề truyền thống</h2>
+
+    </ul>
+    <div class="memory-section section">
+
+
+        <div class="memory-wrapper">
+          <div class="memory-box m1">
+           <img src="${jsonData.Imgtraditionalprofession1}" alt="Ảnh minh họa" class="memory-image">
+            <span class="bloger">${jsonData.traditionalprofession1} <ion-icon name="checkmark-circle"> </ion-icon> </span>
+            <p class="title-blog">${jsonData.Contenttraditionalprofession1}</p>
+          </div>
+          <div class="memory-box m2">
+           <img src="${jsonData.Imgtraditionalprofession2}" alt="Ảnh minh họa" class="memory-image">
+            <span class="bloger">${jsonData.traditionalprofession2} <ion-icon name="checkmark-circle"></span>
+            <p class="title-blog">${jsonData.Contenttraditionalprofession2}</p>
+          </div>
+          <div class="memory-box m3">
+           <img src="${jsonData.Imgtraditionalprofession3}" alt="Ảnh minh họa" class="memory-image">
+            <span class="bloger">${jsonData.traditionalprofession3} <ion-icon name="checkmark-circle"></ion-icon></span>
+            <p class="title-blog">${jsonData.Contenttraditionalprofession3}</p>
+          </div>
+          <div class="memory-box m4">
+           <img src="${jsonData.Imgtraditionalprofession4}" alt="Ảnh minh họa" class="memory-image">
+            <span class="bloger">${jsonData.traditionalprofession4} <ion-icon name="checkmark-circle"></ion-icon></span>
+            <p class="title-blog">${jsonData.Contenttraditionalprofession4}</p>
+          </div>
+          <div class="memory-box m5">
+           <img src="${jsonData.Imgtraditionalprofession5}" alt="Ảnh minh họa" class="memory-image">
+            <span class="bloger">${jsonData.traditionalprofession5} <ion-icon name="checkmark-circle"></ion-icon></span>
+            <p class="title-blog">${jsonData.Contenttraditionalprofession5}</p>
+          </div>
+          <div class="memory-box m6">
+           <img src="${jsonData.Imgtraditionalprofession6}" alt="Ảnh minh họa" class="memory-image">
+            <span class="bloger">${jsonData.traditionalprofession6} <ion-icon name="checkmark-circle"></ion-icon></span>
+            <p class="title-blog">${jsonData.Contenttraditionalprofession6}</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
         `;
     }
 

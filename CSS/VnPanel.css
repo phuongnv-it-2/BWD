@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+
+
+.title-section .head {
+    font-family: 'Ms Madi', sans-serif;
+    font-size: 80px;
+    color: #1e90ff;
+    word-spacing: 15px;
+    font-weight: 500;
+}
+
+.title-section .title {
+    color: hsl(206, 34%, 20%);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.title-section .underline {
+    width: 200px;
+    height: 8px;
+}
+
+
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    margin-bottom: 35px;
+    display: block;
+    width: 100%;
+}
+
+.letter-section {
+    background: white;
+    padding: 35px 50px;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.266);
+    color: hsl(225, 8%, 42%);
+}
+
+.TieuDe {
+    font-family: 'Rowdies', 'cursive';
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e41010;
+}
+
+
+
+
+
+
+/* Slide---------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------ */
+
+.container {
+    position: relative;
+    width: 100%;
+
+    height: 300px;
+    background: #f5f5f5;
+    box-shadow: 0 20px 40px #ccc;
+    overflow: hidden;
+    margin: 30px auto;
+
+}
+
+.container .slide .item {
+
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px #505050;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+/* Slide đang hiển thị chính */
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+/* Các slide tiếp theo */
+.slide .item:nth-child(3) {
+    left: 50%;
+}
+
+.slide .item:nth-child(4) {
+    left: calc(50% + 120px);
+}
+
+.slide .item:nth-child(5) {
+    left: calc(50% + 240px);
+}
+
+.slide .item:nth-child(n + 6) {
+    left: calc(50% + 360px);
+    opacity: 0;
+}
+
+/* Nội dung hiển thị trên slide chính */
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    width: 220px;
+    text-align: center;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui, sans-serif;
+    display: none;
+    background: linear-gradient(rgba(18, 17, 17, 0.46), rgba(49, 45, 45, 0.427));
+    border-radius: 15px;
+}
+
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+/* Tiêu đề */
+.content .name {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+/* Mô tả */
+.content .des {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+/* Nút */
+.content button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+    transition: 0.3s;
+}
+
+.content button:hover {
+    background-color: #555;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+        filter: blur(0);
+    }
+}
+
+/* Nút chuyển slide */
+.button {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.button button {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.3s;
+
+
+}
+
+.button button:hover {
+    background: #333;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* SlideShow-food---------------------------------------------
+ */
+
+
+
+.slide-container {
+    position: relative;
+    width: 800px;
+    height: 350px;
+    border: 3px solid #ede6d6;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.slide-container .slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slide-container .slides img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.slide-container .slides img:not(.active) {
+    top: 0;
+    left: -100%;
+}
+
+span.next,
+span.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span.next {
+    right: 20px;
+}
+
+span.prev {
+    left: 20px;
+}
+
+span.next:hover,
+span.prev:hover {
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+}
+
+.dotsContainer {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dotsContainer .dot {
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dotsContainer .active {
+    background-color: #555;
+}
+
+@keyframes next1 {
+    from {
+        left: 0%
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes prev1 {
+    from {
+        left: 0%
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes prev2 {
+    from {
+        left: -100%
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+
+
+/* memory-box ----------------------------------------------*/
+
+
+.memory-box .memory-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.memory-img {
+    border-radius: 15px;
+}
+
+
+.memory-wrapper .memory-box {
+    width: 250px;
+    height: 200px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: rgba(255, 255, 255, 0.779);
+    font-size: 13px;
+    font-weight: 100;
+    border-radius: 15px;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+
+.memory-wrapper .memory-box:hover {
+    transition: .5s ease;
+    transform: translateY(-5px);
+
+}
+.memory-box:hover::before {
+    background: linear-gradient(to top,rgba(18, 17, 17, 0.46), rgba(128, 118, 118, 0.427));
+}
+
+
+.memory-box span {
+    margin-bottom: 3px;
+    font-weight: 700;
+}
+
+.memory-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.memory-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.memory-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 17, 17, 0.46), rgba(49, 45, 45, 0.427));
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.memory-box span,
+.memory-box p {
+    position: relative;
+    z-index: 3;
+}
