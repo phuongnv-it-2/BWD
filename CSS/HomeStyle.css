@@ -516,3 +516,133 @@ section:last-of-type {
         font-size: 0.9em;
     }
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Điều chỉnh tiêu đề trong các section */
+    .section-title h2 {
+        font-size: 32px; /* Giảm kích thước chữ */
+    }
+
+    .section-title h2::before {
+        font-size: 16px; /* Giảm kích thước tiêu đề phụ */
+    }
+
+    /* Điều chỉnh nút */
+    .btn, .responsive-btn {
+        font-size: 16px; /* Giảm kích thước chữ */
+        padding: 10px 20px; /* Giảm khoảng cách padding */
+    }
+
+    /* Điều chỉnh phần big-image */
+    .big-image .big-image-content h2 {
+        font-size: 50px; /* Giảm kích thước tiêu đề */
+    }
+
+    .big-image .big-image-content p {
+        font-size: 20px; /* Giảm kích thước chữ */
+    }
+
+    /* Điều chỉnh phần about */
+    .about .about-item {
+        width: 100%; /* Đặt chiều rộng 100% để các mục xếp chồng nhau */
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các mục */
+    }
+
+    .about .about-item h2 {
+        font-size: 28px; /* Giảm kích thước tiêu đề */
+    }
+
+    .about .about-content p {
+        font-size: 18px; /* Giảm kích thước chữ */
+    }
+
+    /* Điều chỉnh phần mission */
+    .mission .section-title h2 {
+        font-size: 32px; /* Giảm kích thước tiêu đề */
+    }
+
+    .mission-content p {
+        font-size: 18px; /* Giảm kích thước chữ */
+    }
+
+    /* Điều chỉnh phần feedback */
+    .feedback-list {
+        grid-template-columns: 1fr; /* Chuyển sang bố cục 1 cột */
+        gap: 20px; /* Giảm khoảng cách giữa các mục */
+    }
+
+    .feedback-card {
+        padding: 15px; /* Giảm padding */
+    }
+
+    .feedback-card img {
+        width: 80px; /* Giảm kích thước ảnh */
+        height: 80px;
+    }
+}
+
+/* Responsive adjustments for very small screens (mobile) */
+@media (max-width: 480px) {
+    /* Điều chỉnh tiêu đề trong các section */
+    .section-title h2 {
+        font-size: 24px; /* Giảm kích thước chữ */
+    }
+
+    .section-title h2::before {
+        font-size: 14px; /* Giảm kích thước tiêu đề phụ */
+    }
+
+    /* Điều chỉnh nút */
+    .btn, .responsive-btn {
+        font-size: 14px; /* Giảm kích thước chữ */
+        padding: 8px 15px; /* Giảm khoảng cách padding */
+    }
+
+    /* Điều chỉnh phần big-image */
+    .big-image .big-image-content h2 {
+        font-size: 30px; /* Giảm kích thước tiêu đề */
+    }
+
+    .big-image .big-image-content p {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    /* Điều chỉnh phần about */
+    .about .about-item {
+        width: 100%; /* Đặt chiều rộng 100% để các mục xếp chồng nhau */
+        margin-bottom: 15px; /* Thêm khoảng cách giữa các mục */
+    }
+
+    .about .about-item h2 {
+        font-size: 20px; /* Giảm kích thước tiêu đề */
+    }
+
+    .about .about-content p {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    /* Điều chỉnh phần mission */
+    .mission .section-title h2 {
+        font-size: 24px; /* Giảm kích thước tiêu đề */
+    }
+
+    .mission-content p {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    /* Điều chỉnh phần feedback */
+    .feedback-list {
+        grid-template-columns: 1fr; /* Chuyển sang bố cục 1 cột */
+        gap: 15px; /* Giảm khoảng cách giữa các mục */
+    }
+
+    .feedback-card {
+        padding: 10px; /* Giảm padding */
+    }
+
+    .feedback-card img {
+        width: 60px; /* Giảm kích thước ảnh */
+        height: 60px;
+    }
+}

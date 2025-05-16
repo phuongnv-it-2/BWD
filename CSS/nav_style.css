@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -22,6 +21,13 @@ button {
 
 
 
+header.hide {
+    top: -100px;
+    transition: top 0.3s ease-in-out;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
 
 header {
     position: fixed;
@@ -128,24 +134,26 @@ header .logo img {
 
 @media (max-width: 1390px) {
     header {
-        padding: 14px 2%;
+        padding: 14px 2%; /* Giảm padding để tiết kiệm không gian */
         transition: 1.5s;
     }
 
     .navbar a {
         padding: 5px 0;
-        margin: 0px 20px;
-        font-size: 1rem;
+        margin: 0px 20px; /* Giảm khoảng cách giữa các liên kết */
+        font-size: 1rem; /* Giảm kích thước chữ */
     }
-    #btn-in , #btn-up {
-        font-size: 12px;
+
+    #btn-in, #btn-up {
+        font-size: 12px; /* Giảm kích thước nút */
         border-radius: 100px;
-        padding: var(--padding, 5px 12px);
+        padding: var(--padding, 5px 12px); /* Giảm padding */
         border: var(--border-width, 2px) solid transparent;
-        transition:  0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
     }
+
     .nav-fixed {
-        background: rgb(255, 255, 255);
+        background: rgb(255, 255, 255); /* Đặt nền trắng cho thanh điều hướng cố định */
         padding: 18px 2%;
     }
 }
