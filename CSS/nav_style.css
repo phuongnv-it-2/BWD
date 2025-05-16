@@ -26,7 +26,7 @@ button {
 header {
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 100px;  
     top: 0;
     right: 0;
     z-index: 10000;
@@ -113,7 +113,7 @@ header .logo img {
 }
 
 .nav-fixed {
-    background: white;
+    background-color: rgba(0, 0, 0, 0); 
     padding: 18px 7%;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
@@ -145,7 +145,7 @@ header .logo img {
         transition:  0.25s ease-in-out;
     }
     .nav-fixed {
-        background: white;
+        background: rgb(255, 255, 255);
         padding: 18px 2%;
     }
 }

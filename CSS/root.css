@@ -1,6 +1,10 @@
 :root {
   --subcolor: #04aa6a;
   --maincolor: #d0f5b8;
+<<<<<<< HEAD
   --textcolor: hsl(0, 0%, 100%);
+=======
+  --textcolor: hsl(133, 47%, 29%);
+>>>>>>> 0694ea5941b90082c036737e12dbbb36f876530d
   --color-footer: #d3e030;
 }

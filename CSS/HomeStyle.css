@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     --maincolor: hsl(0, 0%, 100%);
-    --subcolor: #d0f5b8;
+    --subcolor: #000000;
     --textcolor: hsl(113, 100%, 48%);
     --color-footer: #d3e030;
     
@@ -14,9 +14,13 @@
     padding: 0;
     outline: none;
     box-sizing: border-box;
+    
 
 }
-
+strong {
+    font-weight: bold;
+    color: var(--textcolor);
+}
 
 section {
     padding: 50px 0;
@@ -93,16 +97,17 @@ a {
     z-index: 1;
 }
 
+
 .btn:hover {
     background-color: var(--subcolor);
     color: var(--textcolor);
 
 }
-/* Nút cơ bản */
+
 .responsive-btn {
     display: inline-block; 
     background-color: var(--subcolor); 
-    color: var(--textcolor); 
+    color: white; 
     padding: 12px 25px; 
     border: 2px solid var(--textcolor); 
     border-radius: 8px; 
@@ -113,6 +118,21 @@ a {
     cursor: pointer; 
     transition: all 0.3s ease; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.btn.responsive-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn.responsive-btn:hover {
+    background-color: var(--textcolor);
+    color: black;
 }
 
 
@@ -181,11 +201,11 @@ a {
 .big-image .big-image-content {
     position: relative;
     z-index: 1; /* Đặt nội dung phía trên video */
-    color: var(--textcolor);
     text-align: center;
     font-size: 50px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    color: var(--maincolor);
 }
 
 .big-image .big-image-content h2 {
@@ -193,6 +213,7 @@ a {
     font-weight: bold;
     margin-bottom: 20px;
     font-family: 'Dancing Script', cursive;
+    color: var(--textcolor);
 }
 
 .big-image .big-image-content p {
@@ -200,6 +221,7 @@ a {
     font-weight: 300;
     margin-bottom: 20px;
     font-family: 'Dancing Script', cursive;
+    color: var(--maincolor);
 }
 .big-image .big-image-content .btn {
     margin-top: 20px;
@@ -269,7 +291,7 @@ a {
 }
 
 .about .about-content h2 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -278,14 +300,15 @@ a {
 
 .about .about-content p {
     margin-bottom: 15px;
-    font-size: 16px;
-    color: var(--textcolor)
+    font-size: 25px;
+    color: var(--subcolor);
+    font-family: 'Roboto', sans-serif;
 }
 
 .about .about-content .btn {
     margin-top: 20px;
     display: inline-block;
-    background-color: var(--subcolor);
+    background-color: rgba(0, 0, 0, 0.1);
     color: var(--textcolor);
     padding: 10px 20px;
     border-radius: 5px;
@@ -375,7 +398,7 @@ a {
 /* Sứ Mệnh----------------------------------------------- */
 
 .mission {
-    background: linear-gradient(rgba(0, 0, 0, 0.46), rgba(149, 187, 222, 0.427)), url('https://kenh14cdn.com/Article/2014/05/23/bien18.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.46), rgba(149, 187, 222, 0.427)), url('https://thiennhienmoitruong.vn/upload/images/btv/nui-1.jpg');
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -419,9 +442,9 @@ a {
 
 .mission-content p {
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 1.8;
-    color: var(--textcolor)
+    color: var(--maincolor)
 }
 
 section:last-of-type {
