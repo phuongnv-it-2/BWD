@@ -396,26 +396,50 @@ a {
 
 
 /* Sứ Mệnh----------------------------------------------- */
-
 .mission {
-    background: linear-gradient(rgba(0, 0, 0, 0.46), rgba(149, 187, 222, 0.427)), url('https://thiennhienmoitruong.vn/upload/images/btv/nui-1.jpg');
+    background: #DDE1DE;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-size: cover;
     background-color: var(--maincolor); 
     color: var(--textcolor); 
     padding: 50px 0; 
-    text-align: center;
     font-family: 'Roboto', sans-serif;
     position: relative; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
     border-radius: 10px; 
-}   
+    overflow: hidden;
+}
 
+/* Bố cục 2 cột: trái là văn bản, phải là ảnh */
+.mission-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.mission-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: var(--subcolor);
+}
+
+.mission-content p {
+    margin-bottom: 15px;
+    font-size: 25px;
+    line-height: 1.8;
+    color: var(--subcolor);
+}
 
 .mission .section-title h2 {
     font-size: 45px;
-    color: var(--textcolor); /* Màu chữ từ biến :root */
+    color: var(--textcolor);
     font-weight: bold;
     font-family: 'Dancing Script', cursive;
     text-transform: uppercase;
@@ -433,25 +457,38 @@ a {
     font-weight: normal;
 }
 
-.mission-content {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-top: 20px;
-    color: rgba(255, 255, 255, 0.9); /* Màu chữ nhạt hơn */
+/* Ảnh lớn hơn và nằm bên phải */
+.mission-images {
+    position: relative;
+    width: 450px;
+    height: 350px;
+    flex-shrink: 0;
 }
 
-.mission-content p {
-    margin-bottom: 15px;
-    font-size: 25px;
-    line-height: 1.8;
-    color: var(--maincolor)
+.mission-images img {
+    position: absolute;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
 }
 
-section:last-of-type {
-    margin-bottom: 100px;   
+.mission-images .img-top {
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 200px;
+    z-index: 2;
 }
 
-/* Centering Feedback Section------------------------------------------- */
+.mission-images .img-bottom {
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 220px;
+    z-index: 1;
+}
+
+/* Feedback section giữ nguyên */
 .feedback-container {
     display: flex;
     justify-content: center;
@@ -480,11 +517,45 @@ section:last-of-type {
 .feedback-card img {
     width: 100px; 
     height: 100px; 
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image fits within the circle */
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 15px; 
     border: 3px solid var(--subcolor); 
 }
+
+/* Section margin */
+section:last-of-type {
+    margin-bottom: 100px;   
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .mission-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mission-content {
+        text-align: center;
+    }
+
+    .mission-images {
+        margin-top: 30px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .mission-images .img-top,
+    .mission-images .img-bottom {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 10px;
+    }
+}
+
 
  /* reponsive---------------------------------------------------*/
 @media (max-width: 480px) {
