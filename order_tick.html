@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./CSS/order_tick.css" />
+</head>
+<button class="order">Đặt vé</button>
+<div class="box_modal hide">
+  <div class="box">
+    <div class="box_header">
+      <h2 class="tt_header">Đặt vé</h2>
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+
+    <div class="box_body">
+      <div class="banking hide">
+        <div class="base_banking">
+          <h3 class="tt1">Chọn ngân hàng</h3>
+          <div class="wrapper_bank">
+            <div class="item">
+              <img src="IMG/agribank.png" alt="" width="130px" />
+              <p class="a">Agribank</p>
+            </div>
+            <div class="item">
+              <img src="IMG/qrscan.png" alt="" width="130px" />
+              <p class="a">QR SCAN</p>
+            </div>
+          </div>
+          <div class="base_e-wallet">
+            <h3 class="tt1">Chọn ví điện tử</h3>
+            <div class="wrapper_bank">
+              <div class="item">
+                <img src="IMG/momo.png" alt="" width="130px" />
+                <p class="a">Ví Momo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info_payment hide">
+        <div class="base_pay">
+          <div class="tt_pay">Thông tin thanh toán</div>
+          <div class="group_info_pay">
+            <div class="pay_banking">
+              <p class="b">
+                <strong>Ngân hàng:</strong>
+              </p>
+              <span class="pay_banking_load">Agribank</span>
+            </div>
+            <div class="number_banking">
+              <p class="b">
+                <strong>Số tài khoản:</strong>
+              </p>
+              <span class="number_banking_load">2342-4243=2242</span>
+            </div>
+            <div class="name_banking">
+              <p class="b">
+                <strong>Chủ tài khoản:</strong>
+              </p>
+              <span class="name_banking_load">Nguyễn Hiển Tuấn</span>
+            </div>
+            <div class="content_banking">
+              <p class="b">
+                <strong>Nội dung chuyển khoản:</strong>
+              </p>
+              <span class="content_banking_load">PPPĐAA34</span>
+            </div>
+            <div class="price">
+              <p class="b">
+                <strong>Tổng tiền thanh toán:</strong>
+              </p>
+              <span class="price_banking_load">0 (VNĐ)</span>
+            </div>
+            <div class="qr_scan"></div>
+            <div class="btn_payment">
+              <button class="button_payment">Thanh toán</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info_booking">
+        <h3 class="tt">Xem địa điểm từ bản đồ</h3>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489998.53781050397!2d107.28377478283014!3d16.36817571958902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31419c87726490f7%3A0xab1c0fcaf7cb84b5!2zVGjDoG5oIHBo4buRIEh14bq_LCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1747407407829!5m2!1svi!2s"
+            width=" 400" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h3 class="tt">Thông tin chuyến đi</h3>
+        <div class="info">
+          <div class="location">
+            <p>
+              <strong>- Địa điểm du lịch:</strong>
+              <span class="address">Trường Viêt Hàn</span>
+            </p>
+          </div>
+          <div class="date_time">
+            <p><strong>- Thời gian bắt đầu:</strong></p>
+            <p id="tab">
+              <strong>+ Ngày:</strong> <span class="day"></span>
+            </p>
+            <p id="tab">
+              <strong>+ Giờ:</strong> <span class="hour"></span>
+            </p>
+          </div>
+
+          <div class="time_list">
+            <p>
+              <strong>- Lịch trình:</strong>
+            </p>
+            <textarea class="text_list" name="timelist" id="timelist" readonly></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="choose_booking">
+        <h3 class="tt">Thông tin người đặt</h3>
+        <div class="info_order">
+          <p class="name_order">
+            <strong>+ Tên người đặt:</strong>
+            <span class="name_order">Yusin</span>
+          </p>
+          <p class="email_order">
+            <strong>+ Email:</strong> <span class="name_order">Yusin</span>
+          </p>
+          <div class="form_group">
+            <p class="phone_user">
+              <strong>+ Số điện thoại để liên lạc:</strong>
+            </p>
+            <input type="text" id="phone" placeholder="Nhập số điện thoại" />
+          </div>
+        </div>
+        <h3 class="tt">Mua vé</h3>
+        <div class="buy_ticket">
+          <div class="form_buy">
+            <p class=""><strong>- Số lượng vé bạn muốn đặt:</strong></p>
+            <div class="order_quantitys">
+              <div class="click_add"><i class="fa-solid fa-plus"></i></div>
+              <div class="quantity"><span>0</span></div>
+              <div class="click_subtract">
+                <i class="fa-solid fa-minus"></i>
+              </div>
+            </div>
+          </div>
+
+          <p class="price_ticket">
+            <strong>- Giá vé:</strong>
+            <span class="price_ticket"></span>
+          </p>
+
+          <p>
+            <strong>-> Tổng cộng chi phí của chuyến đi: </strong>
+            <span class="total_price"></span>
+          </p>
+        </div>
+        <h3 class="tt">Ghi chú</h3>
+        <div class="comment">
+          <p class="note">
+            <strong><i class="star">*</i> Nếu bạn có vấn đề hay yêu cầu điều gì
+              chúng tôi có thể hỗ trợ bạn:</strong>
+          </p>
+          <textarea class="text_note" name="" id=""></textarea>
+        </div>
+      </div>
+      <div class="finished hide">
+        <h1 class="tt">Xác nhận đặt vé thành công!</h1>
+        <h3 class="tt">
+          Chúc bạn có một chuyến đi vui vé và đầy thú vị nhé! ☆*: .｡.
+          o(≧▽≦)o .｡.:*☆
+        </h3>
+        <h2 class="tt">Cảm ơn bạn đã sử dụng dich vụ của chúng tôi.</h2>
+      </div>
+    </div>
+
+    <div class="box_footer">
+      <div class="btn1">
+        <button class="accept_move_back">Trở về</button>
+      </div>
+      <div class="light_progress">
+        <div class="progress-bar-bg"></div>
+        <div class="progress-bar-fill" id="progress-fill"></div>
+        <div class="steps">
+          <div class="step-container1">
+            <div class="step-label">Đặt vé</div>
+            <div class="step active"></div>
+          </div>
+          <div class="step-container2">
+            <div class="step-label">Thanh toán</div>
+            <div class="step"></div>
+          </div>
+          <div class="step-container3">
+            <div class="step-label">Xác nhận thanh toán</div>
+            <div class="step"></div>
+          </div>
+        </div>
+      </div>
+      <div class="btn2">
+        <button class="accept_move_next">Tiếp theo</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./JS/order_ticket.js"></script>
+<script src="https://kit.fontawesome.com/c8329216c8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

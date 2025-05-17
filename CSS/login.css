@@ -64,7 +64,7 @@ body {
 }
 
 h2 {
-  color: #02764a;
+  color: var(--textcolor);
   text-align: center;
   font-size: 30px;
   font-weight: bold;
@@ -111,7 +111,7 @@ input {
 }
 .btn_login {
   color: white;
-  background: #02764a;
+  background: var(--textcolor);
 }
 
 .btn_login_google {
